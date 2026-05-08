@@ -1,0 +1,155 @@
+:root {
+    --primary: #ff4d6d;
+    --secondary: #ffccd5;
+    --text: #590d22;
+    --white: #ffffff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    /* Transparent overlay lets stars show through */
+    background: linear-gradient(rgba(255, 245, 245, 0.8), rgba(255, 245, 245, 0.8)), 
+                url('assets/starmap.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+/* Header & Counter */
+.header {
+    text-align: center;
+    padding: 30px 20px;
+    background: var(--white);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+#timer {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin-top: 10px;
+}
+
+/* Section Logic - Fixed for Mobile Centering */
+.section {
+    display: none; 
+    padding: 20px;
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    animation: fadeIn 0.5s ease;
+}
+
+.active { 
+    display: flex !important; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nav-card {
+    background: var(--white);
+    padding: 25px 15px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-card p { margin-top: 10px; font-size: 0.9rem; }
+
+/* Photo Gallery (Lyrics & Memories) */
+.photo-gallery, .horizontal-gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 10px 0;
+    width: 100%;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.photo-card {
+    flex: 0 0 85%;
+    background: var(--white);
+    padding: 10px;
+    border-radius: 15px;
+    scroll-snap-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.photo-card img {
+    width: 100%;
+    border-radius: 10px;
+    filter: brightness(1.05) contrast(1.1);
+}
+
+/* --- THE LETTER SECTION (Dark Background for Contrast) --- */
+#letter {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('assets/starmap.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.letter-paper {
+    background: #fff;
+    background-image: linear-gradient(#f1f1f1 1px, transparent 1px);
+    background-size: 100% 30px;
+    width: 95%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 35px 25px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+    min-height: 400px;
+    line-height: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #333;
+    text-align: left;
+}
+
+/* Buttons */
+.back-btn {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 12px 30px;
+    background: var(--primary);
+    color: white;
+    border-radius: 25px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+canvas {
+    background: url('assets/starmap.png');
+    background-size: cover;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 350px;
+    touch-action: none;
+}

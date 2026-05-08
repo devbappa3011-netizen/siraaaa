@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Our Universe</title>
+</head>
+<body>
+
+    <div id="hub" class="section active">
+        <div class="header">
+            <h1>Happy 1 Year of beingg togetherrr babyyyyy!!!! ❤️</h1>
+            <div id="timer">Calculating our love...</div>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="nav-card" onclick="openSection('scratch')">🎁<p>Surprisee for youuu...</p></div>
+            <div class="nav-card" onclick="openSection('video')">🎬<p>Our mini filmm</p></div>
+            <div class="nav-card" onclick="openSection('gallery')">📸<p>Pretty Memoriess of ussss</p></div>
+            <div class="nav-card" onclick="openSection('reasons')">✨<p>Why I Love You?!?!</p></div>
+            <div class="nav-card" onclick="openSection('letter')">✍️<p>Letter for my Lovee</p></div>
+            <div class="nav-card" onclick="openSection('lyrics')">🎵<p>Lyrics which reminds me of youuuu</p></div>
+        </div>
+    </div>
+
+    <div id="scratch" class="section">
+        <h2>Scratch to reveal a surprise!</h2>
+        <div class="canvas-container">
+            <canvas id="scratchCanvas" width="300" height="400"></canvas>
+        </div>
+        <button class="back-btn" onclick="openSection('hub')">Go Back</button>
+    </div>
+
+    <div id="video" class="section">
+        <h2>Our Mini Film</h2>
+        <video id="mainVideo" width="100%" controls playsinline>
+            <source src="assets/video.mp4" type="video/mp4">
+        </video>
+        <button class="back-btn" onclick="openSection('hub')">Go Back</button>
+    </div>
+
+    <div id="gallery" class="section">
+        <h2>Memories</h2>
+        <div class="horizontal-gallery">
+            <div class="photo-card"><img src="assets/pic1.jpg"><p>The first time we met ❤️</p></div>
+            <div class="photo-card"><img src="assets/pic2.jpg"><p>That cute date night</p></div>
+        </div>
+        <button class="back-btn" onclick="openSection('hub')">Go Back</button>
+    </div>
+
+    <div id="reasons" class="section">
+        <h2>Why I Love You</h2>
+        <div id="reasonBox">Click the button below...</div>
+        <button class="action-btn" onclick="newReason()">Next Reason ✨</button>
+        <button class="back-btn" onclick="openSection('hub')">Go Back</button>
+    </div>
+
+<div id="letter" class="section">
+    <div class="letter-paper">
+        <h2>My Letter to You</h2>
+        <p>Your heart goes here...</p>
+    </div>
+    <button class="back-btn" onclick="openSection('hub')">Go Back</button>
+</div>
+
+<div id="lyrics" class="section">
+    <h2>When I Hear These, I Think of You</h2>
+    <div class="horizontal-gallery">
+        <div class="photo-card"><img src="assets/lyric1.jpg"><p>Song Title 1</p></div>
+        <div class="photo-card"><img src="assets/lyric2.jpg"><p>Song Title 2</p></div>
+        <div class="photo-card"><img src="assets/lyric3.jpg"><p>Song Title 3</p></div>
+        <div class="photo-card"><img src="assets/lyric4.jpg"><p>Song Title 4</p></div>
+    </div>
+    <button class="back-btn" onclick="openSection('hub')">Go Back</button>
+</div>
+
+<audio id="sectionMusic" loop>
+    <source id="musicSource" src="assets/main_theme.mp3" type="audio/mpeg">
+</audio>
+<script src="script.js"></script>
+</body>
+</html>
