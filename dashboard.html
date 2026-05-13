@@ -23,16 +23,25 @@
         </div>
     </div>
 
-    <div id="scratch" class="section">
-        <h2>Scratch to reveal a surprise!</h2>
-        <div class="canvas-container">
-            <canvas id="scratchCanvas" width="300" height="400"></canvas>
-        </div>
-        <button class="back-btn" onclick="openSection('hub')">Go Back</button>
-    </div>
+   <div id="scratch" class="section">
+    <h2>Scratch for a Surprise! ❤️</h2>
+    
+    <!-- This container holds both the prize and the scratchable layer -->
+   <div class="scratch-container" style="background-color: white;">
+    <!-- THE PRIZE -->
+    <img src="assets/prize.png" class="prize-img" id="prizeImage">
+    
+    <!-- THE COVER -->
+    <canvas id="scratchCanvas" width="300" height="300"></canvas>
+</div>
+
+    <!-- The button is outside the container to avoid layering issues -->
+    <button class="back-btn" onclick="openSection('hub')">Go Back</button>
+</div>
+
 
     <div id="video" class="section">
-        <h2>Our Mini Film</h2>
+        <h2>A small edit of uss together</h2>
         <video id="mainVideo" width="100%" controls playsinline>
             <source src="assets/video.mp4" type="video/mp4">
         </video>
@@ -40,36 +49,78 @@
     </div>
 
     <div id="gallery" class="section">
-        <h2>Memories</h2>
+        <h2>MY U.N.I.V.E.R.S.E.</h2>
         <div class="horizontal-gallery">
-            <div class="photo-card"><img src="assets/pic1.jpg"><p>The first time we met ❤️</p></div>
-            <div class="photo-card"><img src="assets/pic2.jpg"><p>That cute date night</p></div>
+            <div class="photo-card"><img src="assets/gal1.jpg"><p>Can't forget how scared I was when we first mett</p></div>
+            <div class="photo-card"><img src="assets/gal2.jpg"><p>Almost same situation but we started to record our momentsss</p></div>
+            <div class="photo-card"><img src="assets/gal3.jpg"><p>Bestesttt Birthday celebration of my entire lifeeee!!!</p></div>
+            <div class="photo-card"><img src="assets/gal4.jpg"><p>The video call we had before thiss meet up is as memorable as this kisss!!(The reel toooo;)</p></div>
+            <div class="photo-card"><img src="assets/gal5.jpg"><p></p>Don't worry you'll bowl good just focus on keeping ball in center of the lanee alrightt</div>
+            <div class="photo-card"><img src="assets/gal6.jpg"><p>A drive where i could feel your breathes, and your warmth while we were arguing over small thingss</p></div>    
+            <div class="photo-card"><img src="assets/gal7.jpg"><p>Ahhh I know it's quite dramatic still youu were cutest and preetiestt that day(Youu are all the time babygirll!!)</p></div>
+            <div class="photo-card"><img src="assets/gal8.jpg"><p>Yeah we both are young dumb kidssssss fr</p></div>
         </div>
         <button class="back-btn" onclick="openSection('hub')">Go Back</button>
     </div>
 
     <div id="reasons" class="section">
-        <h2>Why I Love You</h2>
-        <div id="reasonBox">Click the button below...</div>
-        <button class="action-btn" onclick="newReason()">Next Reason ✨</button>
+        <h2>Some of many reasons why i lovee youuu</h2>
+        <div id="reasonBox">Click the button beloww.</div>
+        <button class="action-btn" onclick="newReason()">Next....✨</button>
         <button class="back-btn" onclick="openSection('hub')">Go Back</button>
     </div>
 
+
 <div id="letter" class="section">
     <div class="letter-paper">
-        <h2>My Letter to You</h2>
-        <p>Your heart goes here...</p>
+        
+        <div class="voice-player-container">
+            <p class="voice-label">Click here to hear me read the letter for youuu...❤️</p>
+            <audio id="letterVoice" src="assets/letter_voice.mp3"></audio>
+            <button onclick="toggleVoiceNote()" id="voicePlayBtn" class="play-circle">
+                ▶️
+            </button>
+        </div>
+
+        
+        <div class="letter-content">
+            <p>Dear Siraaa,</p>
+            <p>It’s almost 0007 of 10th may, Sunday, and I’m kinda sleepless, and i feel as I’m almost done with the site i was working on, I’ll now share my thoughts for you, for us, via the <u>letter</u>.
+I know it’s virtual, i might be wrong maybe but you mostly like handwritten things, But I’m texting it now and will paste it on the site later on.<br><br>
+Soo first things first, <u><b>Happiestt onee yearr off being togetherrr princessss!!!!</b></u> I’m soo much happy to have such a <u>loving</u>, <u>caring</u>, <u>beautiful</u>, <u>energetic</u>, <u>emotional</u> Girll, Just by <u>my</u> Sidee!!! I’ll share in not much words how i’ve <u>felt</u> then, how I’m feeling <u>now</u>> and what feelings are <u>never</u> gonna <u>leave me.</u>
+It’s such a <u>beautiful</u> thing to have such a <u>girlfriendd</u>, and you were even my <i><u>crush</u></i> back then, and yeah I’m <u>swearing</u>> on you, on <u>everything</u> i have that at some point of life, i couldn’t do nothing about you, but just <u>pray for god</u> for you <u>happiness</u> and <u>well being</u>, but also atleast <u>one</u> single chance for me to show you how much <u>love</u> i’ve had, and i really thought that you’d be just my <b>remembrance</b>, but see, here <u>I have you</u>, Trying fix my mistakes, and also showing you all the <u>love</u> you’ve <u>always deserved</u>, and not letting you goo even for a while. And people say, as a <u>final</u> act of <b>love</b> i’ll let you go, but as <u>my final act of love</u>, I’d be feeling blessed to <u>hold</u> on to <u>you</u> for <b>my entire journey</b>, for my entire life.<br><br> 
+I’m <u>happy</u> as you always listen to me, and <u>lately</u> i might be sounding <u>strict</u> and <u>rude</u> but it’s for you and <u>only youu</u> cutie, And I’m again <u>sorry</u> for all the moments you wanted me to be there, like the <u>kerela</u> or even of the <u>train</u> issue where i was playing <u>badminton</u>, i was unable to be there for you. Also i’m so <u>very sorry</u> as I didn’t told you the truth about the <u>period hamper</u> I gave you, I just gave her the list of what all things I want, and she personalised it for me, and i’m sorry for <u>cutting</u> the <u>phone calls</u> whenever my emotions <u>overcame</u> my love, and also sorry if you ever felt that i’ve judged you, of your character, which even when in hell, <u>i’d never do</u>. I’m sorry for all <u>emoji less replies</u>, for all <u>dry texts</u>, but yeah not for calling you kaku or brainless nerd or even schwarmaaaa or even samosaaa and momoss!!!!<br><br>
+The <u>vibe</u> you carry, Princess, is just <u>out of this world</u> for me. Your way to make people <u>laugh</u>, your ability to <u>handle emotions</u> of mine even when you had so much more things going on in <u>your head</u>, it’s just something only someone does when that person’s in <u>love</u>, and yeah i can <u>feel it all!!!</u> I still remember the day we met when i was supposed to give you the invitation card, i was damn <u>shaking</u> the hell out if me, and when we went to <u>Mumbai</u> for our first trip, I was just <u>anxious</u> and <u>nervous</u> like anything. I remember every <u>first bite</u> you had for me, the <u>pics</u> we clicked, that moment when you kept your <u>head</u> on my shoulder, i wish i were there to just hug you and not let you go and just tell you for <u>50th</u> time how much  <u>I love youuu</u>, I hope you won’t get bored hearing mee!!!<br><br>
+Whenever I saw <u>you</u> I just felt, yes <i>she’s the one</i>, she <i>has to be the on</i>, and she’s the <i>only one i needed</i> to fix myself. Even tho you’re <u>not here</u>, i always have your <u>presence</u> always with me, which always brings up <u>discipline</u>, and <u>hard work</u> outtaa me. I remember, <u>truly and perfectly</u>, that feeling of your <u>skin</u> when you <u>touched</u> me the first time, all your <u>kisses</u>, and I really really <u>misss</u> the taste of <u>your lipss</u> but I can’t get over that thought that <i>I kissed myy girll</i>, and your <u>slapss</u> and all the things you gave me. When this all was happening, unknowingly but fortunately, I got to witness so much <u>more things</u> like your <u>hairs</u>,your <u>smile</u>, your <u>eyes</u> and <u>side eyes</u> which felt more than just some random things, they felt likee <u>love!!</u> 
+
+<br><br><u>Thankyou for everything, Siraa!!</u> Yes i know i’m not supposed to thank you but just keep it, right now i can’t doo much things for you so i’m just trying to make you happy with these few things. 
+I hope you have a <u>beautiful</u> life ahead with me, and in the most <i>selfish</i> way possible, i hope nobody <i>admires</i> you the way <i>I do</i>. <U>Love you to the universe and back, Myy and only myyy princessss!!</U>Sending you all my <u>huggs</u> and <u>kissesss</u>!!!!! 
+<p>Your’s and only your’s,<br>Deviii<3 </p>
+        </div>
+
+        
+        <div class="bouquet-footer">
+            <p style="font-style: italic; font-size: 0.9rem;">P.S. - I can’t be actually there right now to give it to you so yeah click below to get this small present from me!!! Love Lovee Meine Tochter!!!</p></p>
+            <a href="https://digibouquet.vercel.app/bouquet/238bf1ec-3853-4a59-adbb-c342602c01bf" 
+               target="_blank" 
+               class="back-btn" 
+               style="background: #ff4d6d; text-decoration: none; display: inline-block;">
+               Click heree
+            </a>
+        </div>
     </div>
-    <button class="back-btn" onclick="openSection('hub')">Go Back</button>
+    
+    
+    <button onclick="openSection('hub')" class="back-btn">Back to Dashboard</button>
 </div>
 
 <div id="lyrics" class="section">
     <h2>When I Hear These, I Think of You</h2>
     <div class="horizontal-gallery">
-        <div class="photo-card"><img src="assets/lyric1.jpg"><p>Song Title 1</p></div>
-        <div class="photo-card"><img src="assets/lyric2.jpg"><p>Song Title 2</p></div>
-        <div class="photo-card"><img src="assets/lyric3.jpg"><p>Song Title 3</p></div>
-        <div class="photo-card"><img src="assets/lyric4.jpg"><p>Song Title 4</p></div>
+        <div class="photo-card"><img src="assets/lyric1.jpg"><p>Ishq Wala Love</p></div>
+        <div class="photo-card"><img src="assets/lyric2.jpg"><p>MINE</p></div>
+        <div class="photo-card"><img src="assets/lyric3.jpg"><p>Kalank - Title Track</p></div>
+        <div class="photo-card"><img src="assets/lyric4.jpg"><p>New Year's Day</p></div>
     </div>
     <button class="back-btn" onclick="openSection('hub')">Go Back</button>
 </div>

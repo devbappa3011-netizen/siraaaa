@@ -153,3 +153,72 @@ canvas {
     max-width: 350px;
     touch-action: none;
 }
+/* --- Letter Voice & Bouquet Styles --- */
+.voice-player-container {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px dashed #ffccd5;
+    padding-bottom: 20px;
+}
+
+.voice-label {
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    color: #ff4d6d;
+    margin-bottom: 10px;
+}
+
+.play-circle {
+    background: #ff4d6d;
+    border: none;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 15px rgba(255, 77, 109, 0.4);
+    transition: transform 0.2s ease;
+}
+
+.letter-content {
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 32px; /* Makes it look like it's on the lines */
+    color: #333;
+}
+
+.bouquet-footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+.scratch-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 30px auto;
+    background-color: white; /* This helps make the gift card visible */
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.prize-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+    object-fit: contain; 
+    display: block !important;
+    opacity: 1 !important; /* Ensure it's not hidden */
+}
+
+#scratchCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2; 
+    background: transparent; /* Ensure background is clear */
+}

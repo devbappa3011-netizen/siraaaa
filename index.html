@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love</title>
+    <style>
+        :root { --main-pink: #ff4d6d; --bg-cream: #fff5f5; }
+        body { background: var(--bg-cream); font-family: 'Segoe UI', sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; text-align: center; color: #333; }
+        .container { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 80%; }
+        h1 { color: var(--main-pink); }
+        .btn { background: var(--main-pink); color: white; padding: 15px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; transition: 0.3s; }
+        .btn:hover { transform: scale(1.05); }
+        .hidden { display: none; }
+        #countdown { font-size: 1.2rem; font-weight: bold; margin-top: 15px; color: #777; }
+    </style>
+</head>
+<body>
+    <audio id="teaserAudio" src="assets/teaser.mp3" loop></audio>
+
+    <div class="container" id="locked-section">
+        <p>Caught youuu you sneakingg aroundd babee!!</p>
+        <p>It's your surprisee alright, Come againn on Our Anniversary!!!!</p>
+        <p>Take caree of yourself, my lovee!</p>
+        <h1>Lovee you moree siraaa!!!❤️</h1>
+        
+        <div id="countdown"></div>
+    </div>
+
+    <div class="container hidden" id="unlocked-section">
+        <h1>Happyyyyy Anniversaryyy Princeessss ❤️</h1>
+        <p>I lovee you moree babygirl!! Now sit back and enjoy this small gift from me to youu.</p>
+        <a href="dashboard.html" class="btn">Here's the surprisee i've been waiting to show youuu!!!!</a>
+    </div>
+
+    <script>
+        function updateGate() {
+            const target = new Date('May 30, 2026 00:00:00').getTime();
+            const now = new Date().getTime();
+            const diff = target - now;
+
+            if (diff <= 0) {
+                document.getElementById('locked-section').classList.add('hidden');
+                document.getElementById('unlocked-section').classList.remove('hidden');
+            } else {
+                const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const s = Math.floor((diff % (1000 * 60)) / 1000);
+                document.getElementById('countdown').innerHTML = `Only ${d} days, ${h} hours, ${m} minutes, and ${s} seconds to gooo!`;
+            }
+        }
+        updateGate();
+        setInterval(updateGate, 1000);
+        // Set the anniversary date
+const anniversaryDate = new Date('May 30, 2026 00:00:00').getTime();
+
+function checkDate() {
+    const now = new Date().getTime();
+    const distance = anniversaryDate - now;
+
+    const locked = document.getElementById('locked-section');
+    const unlocked = document.getElementById('unlocked-section');
+    const teaser = document.getElementById('teaserAudio');
+
+    if (distance <= 0) {
+        // It IS the anniversary! Show the surprise
+        locked.classList.add('hidden');
+        unlocked.classList.remove('hidden');
+    } else {
+        // Not yet! Play music when she tries to look
+        locked.addEventListener('click', () => {
+            teaser.play().catch(e => console.log("Music needs a click to start!"));
+        });
+
+        // Optional: Update your countdown div
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        document.getElementById('countdown').innerHTML = `Only ${days} days left until the magic...`;
+    }
+}
+
+// Run the check as soon as the page loads
+window.onload = checkDate;
+    </script>
+</body>
+</html>
