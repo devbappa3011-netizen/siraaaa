@@ -25,6 +25,40 @@ function updateTimer() {
 }
 updateTimer();
 setInterval(updateTimer, 1000);
+// ====== CAKE INTERACTION LOGIC ======
+function startCakeCelebration() {
+    // 1. Unhide the cake container step
+    const cakeStep = document.getElementById('cake-step');
+    if (cakeStep) cakeStep.style.display = 'block';
+
+    let timeLeft = 5;
+    const cakeTimerEl = document.getElementById('cake-timer');
+    
+    const cakeCountdown = setInterval(() => {
+        timeLeft--;
+        if (cakeTimerEl) cakeTimerEl.innerText = timeLeft;
+
+        if (timeLeft <= 0) {
+            clearInterval(cakeCountdown);
+            
+            // 2. Extinguish the flickering candle flame
+            const flame = document.getElementById('candle-flame');
+            if (flame) flame.style.display = 'none';
+            
+            // 3. Update instructions and display your entry button
+            const titleText = document.querySelector('#cake-step h3');
+            if (titleText) titleText.innerText = "Make a wish! ✨";
+            
+            const enterBtn = document.getElementById('enter-dash-btn');
+            if (enterBtn) enterBtn.style.display = 'inline-block';
+        }
+    }, 1000);
+}
+
+// REDIRECT TARGET
+function goToDashboard() {
+    window.location.href = "dashboard.html";
+}
 
 // --- MUSIC CONFIGURATION ---
 const songMap = {
@@ -193,4 +227,34 @@ function initScratch() {
             scratch(pos.x, pos.y);
         }
     });
+}
+// CAKE BLOWING LOGIC
+function startCakeCelebration() {
+    // Show the cake step container
+    document.getElementById('cake-step').style.display = 'block';
+
+    let timeLeft = 5;
+    const cakeTimerEl = document.getElementById('cake-timer');
+    
+    const cakeCountdown = setInterval(() => {
+        timeLeft--;
+        if (cakeTimerEl) cakeTimerEl.innerText = timeLeft;
+
+        if (timeLeft <= 0) {
+            clearInterval(cakeCountdown);
+            
+            // Extinguish flame animation
+            const flame = document.getElementById('candle-flame');
+            if (flame) flame.style.display = 'none';
+            
+            // Update prompt text and display final navigation button
+            document.querySelector('#cake-step h3').innerText = "Make a wish! ✨";
+            document.getElementById('enter-dash-btn').style.display = 'inline-block';
+        }
+    }, 1000);
+}
+
+// PAGE REDIRECTION
+function goToDashboard() {
+    window.location.href = "dashboard.html";
 }
