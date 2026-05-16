@@ -13,6 +13,179 @@
         .btn:hover { transform: scale(1.05); }
         .hidden { display: none; }
         #countdown { font-size: 1.2rem; font-weight: bold; margin-top: 15px; color: #777; }
+        /* --- DIGITAL CAKE ANIMATION STYLES --- */
+        .cake-container {
+            position: relative;
+            width: 200px;
+            height: 150px;
+            margin: 20px auto;
+        }
+        .cake {
+            position: absolute;
+            bottom: 0;
+            width: 150px;
+            height: 80px;
+            background: #ffb6c1; /* Beautiful Pink Base */
+            border-radius: 10px 10px 0 0;
+            left: 25px;
+            box-shadow: inset 0 10px 0 #ff99aa;
+        }
+        .candle {
+            position: absolute;
+            top: -30px;
+            left: 65px;
+            width: 15px;
+            height: 30px;
+            background: #ffffff;
+            border-radius: 3px;
+            box-shadow: inset -3px 0 0 #ddd;
+        }
+        .flame {
+            position: absolute;
+            top: -15px;
+            left: 2px;
+            width: 10px;
+            height: 15px;
+            background: #ff4500;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            animation: flicker 0.1s infinite alternate;
+        }
+        @keyframes flicker {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); opacity: 0.9; }
+        }
+        /* Sprinkles Placements */
+        .sprinkle {
+            position: absolute;
+            width: 8px;
+            height: 4px;
+            border-radius: 2px;
+        }
+        .sp-1 { top: 20px; left: 20px; background: #61dafb; transform: rotate(15deg); }
+        .sp-2 { top: 15px; left: 50px; background: #ffff00; transform: rotate(-30deg); }
+        .sp-3 { top: 25px; left: 80px; background: #ba55d3; transform: rotate(45deg); }
+        .sp-4 { top: 18px; left: 115px; background: #ffffff; transform: rotate(-15deg); }
+        .sp-5 { top: 40px; left: 35px; background: #ffff00; transform: rotate(60deg); }
+        .sp-6 { top: 38px; left: 95px; background: #61dafb; transform: rotate(-45deg); }
+        /* --- PREMIUM 3D CAKE & GLOWING CANDLES STYLES --- */
+/* --- PREMIUM 3D CAKE & GLOWING CANDLES STYLES --- */
+/* --- FIXED PREMIUM 3D CAKE & PLACED CANDLES --- */
+.cake-container {
+    position: relative;
+    width: 280px;
+    height: 160px; /* Adjusted height spacing */
+    margin: 10px auto;
+}
+
+.cake-3d {
+    position: absolute;
+    bottom: 10px;
+    left: 40px;
+    width: 200px;
+    height: 100px;
+}
+.cake-top-frosting {
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 40px;
+    background: #fff0f5; 
+    border-radius: 100px / 20px;
+    z-index: 3;
+    box-shadow: inset 0 -3px 5px rgba(0,0,0,0.05);
+}
+.cake-cream-layer {
+    position: absolute;
+    top: 15px;
+    width: 200px;
+    height: 50px;
+    background: #ffb6c1; 
+    border-radius: 100px / 20px;
+    z-index: 2;
+}
+.cake-base-layer {
+    position: absolute;
+    top: 35px;
+    width: 200px;
+    height: 60px;
+    background: #c71585; 
+    border-radius: 100px / 20px;
+    z-index: 1;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Fixed: Positioned absolute inside the 3D base */
+.candles-wrapper {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    top: -25px; /* Pulls candles up to sit perfectly in the center top */
+    left: 0;
+    z-index: 5; /* Forces flames over frosting layer */
+}
+.premium-candle {
+    position: absolute;
+    width: 8px;
+    height: 35px;
+    border-radius: 4px 4px 0 0;
+    background: repeating-linear-gradient(45deg, #ffffff, #ffffff 4px, #ff4d6d 4px, #ff4d6d 8px);
+    box-shadow: 1px 2px 4px rgba(0,0,0,0.1);
+}
+.wick {
+    position: absolute;
+    top: -4px;
+    left: 3px;
+    width: 2px;
+    height: 4px;
+    background: #444;
+}
+
+/* Fixed Arc Placement: Adjusting depth so they trace the curved 3D oval path */
+.c1 { left: 30px; top: 14px; }
+.c2 { left: 65px; top: 6px; }
+.c3 { left: 96px; top: 2px; } /* Center master candle */
+.c4 { left: 127px; top: 6px; }
+.c5 { left: 162px; top: 14px; }
+
+/* Cinematic Flickering Aura Flames */
+.candle-flame {
+    position: absolute;
+    top: -18px;
+    left: -3px;
+    width: 14px;
+    height: 20px;
+    background: linear-gradient(to bottom, #ffffff, #ffaa00, #ff3300);
+    border-radius: 50% 50% 20% 20% / 60% 60% 40% 40%;
+    box-shadow: 0 0 10px #ffaa00, 0 0 20px #ff3300;
+    transform-origin: center bottom;
+    animation: organicFlicker 0.15s infinite alternate ease-in-out;
+}
+
+.c2 .candle-flame { animation-delay: 0.03s; }
+.c3 .candle-flame { animation-delay: 0.07s; }
+.c4 .candle-flame { animation-delay: 0.02s; }
+.c5 .candle-flame { animation-delay: 0.05s; }
+
+@keyframes organicFlicker {
+    0% { transform: scale(1) rotate(-1deg); }
+    100% { transform: scale(1.06) rotate(1.5deg); }
+}
+
+/* Scattered Sprinkles Aesthetics */
+.star-sprinkle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+.s1 { top: 10px; left: 30px; background: #61dafb; }
+.s2 { top: 22px; left: 55px; background: #ffff00; }
+.s3 { top: 8px; left: 85px; background: #ba55d3; }
+.s4 { top: 24px; left: 110px; background: #00ff7f; }
+.s5 { top: 12px; left: 145px; background: #ff4500; }
+.s6 { top: 20px; left: 170px; background: #61dafb; }
+.s7 { top: 15px; left: 95px; background: #ffffff; }
+.s8 { top: 25px; left: 15px; background: #ffff00; }
     </style>
 </head>
 <body>
@@ -28,11 +201,79 @@
     </div>
 
     <div class="container hidden" id="unlocked-section">
-        <h1>Happyyyyy Anniversaryyy Princeessss ❤️</h1>
-        <p>I lovee you moree babygirl!! Now sit back and enjoy this small gift from me to youu.</p>
-        <a href="dashboard.html" class="btn">Here's the surprisee i've been waiting to show youuu!!!!</a>
+        <div id="welcome-step" style="text-align: center;">
+            <h1>Happyyyyy Anniversaryyy Princeessss ❤️</h1>
+            <p>I'm soo glad we made to our first year togetherr!!! Now sit back and enjoy this small gift from me to youu babyy.</p>
+            
+            <h2 style="margin-top: 30px;">We'll start by celebrating itt</h2>
+            <button class="btn" onclick="startCakeCelebration()" style="cursor: pointer; border: none; display: inline-block;">Click here for the celebrationn</button>
+        </div>
+
+    <div id="cake-step" style="display: none; text-align: center; margin-top: 20px; width: 100%;">
+    <h3 style="font-family: 'Segoe UI', sans-serif; color: #ff4d6d; font-size: 1.5rem; margin-bottom: 15px;">
+        Blow the candles in <span id="cake-timer">5</span>s! 
+    </h3>
+    
+    <div class="cake-container">
+        <div class="cake-3d">
+            <div class="candles-wrapper">
+                <div class="premium-candle c1"><div class="wick"></div><div class="candle-flame"></div></div>
+                <div class="premium-candle c2"><div class="wick"></div><div class="candle-flame"></div></div>
+                <div class="premium-candle c3"><div class="wick"></div><div class="candle-flame"></div></div>
+                <div class="premium-candle c4"><div class="wick"></div><div class="candle-flame"></div></div>
+                <div class="premium-candle c5"><div class="wick"></div><div class="candle-flame"></div></div>
+            </div>
+
+            <div class="cake-top-frosting">
+                <div class="star-sprinkle s1"></div><div class="star-sprinkle s2"></div>
+                <div class="star-sprinkle s3"></div><div class="star-sprinkle s4"></div>
+                <div class="star-sprinkle s5"></div><div class="star-sprinkle s6"></div>
+                <div class="star-sprinkle s7"></div><div class="star-sprinkle s8"></div>
+            </div>
+            <div class="cake-cream-layer"></div>
+            <div class="cake-base-layer"></div>
+        </div>
     </div>
 
+    <button id="enter-dash-btn" class="btn" onclick="goToDashboard()" style="display: none; margin-top: 30px; border: none; cursor: pointer; padding: 15px 40px; box-shadow: 0 4px 15px rgba(255, 77, 109, 0.4);">
+        Here's a small gift from mee to youuu babyy....
+    </button>
+</div>
+
+<script>
+function startCakeCelebration() {
+    // Switch panels from welcome button to cake screen
+    document.getElementById('welcome-step').style.display = 'none';
+    document.getElementById('cake-step').style.display = 'block';
+
+    let timeLeft = 5;
+    const cakeTimerEl = document.getElementById('cake-timer');
+    
+    const cakeCountdown = setInterval(() => {
+        timeLeft--;
+        if (cakeTimerEl) cakeTimerEl.innerText = timeLeft;
+
+        if (timeLeft <= 0) {
+            clearInterval(cakeCountdown);
+            
+            // Fixed: Select and put out ALL 5 candle flames simultaneously
+            const flames = document.querySelectorAll('.candle-flame');
+            flames.forEach(flame => {
+                flame.style.display = 'none';
+            });
+            
+            // Smoothly update the visual strings and present the entry key
+            document.querySelector('#cake-step h3').innerHTML = "Make a wish!!!";
+            document.getElementById('enter-dash-btn').style.display = 'inline-block';
+        }
+    }, 1000);
+}
+
+function goToDashboard() {
+    // Seamless link forwarding to your dashboard file
+    window.location.href = "dashboard.html";
+}
+</script>
     <script>
         function updateGate() {
             const target = new Date('May 30, 2026 00:00:00').getTime();
